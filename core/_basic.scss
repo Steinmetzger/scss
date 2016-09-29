@@ -1,0 +1,245 @@
+html{
+    font-size: 18px;
+    color: #333;
+}
+.holder {
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+}
+.clear{
+    @extend %clear;
+}
+.layout{
+    .content{
+        width: 100%;
+    }
+    &.sidebar{
+        @extend %clear;
+        .content{
+            width: 750px;
+            float: left;
+            margin-right: 30px;
+        }
+        .sidebar{
+            width: 300px;
+            float: left;
+            @extend %box;
+        }
+    }
+}
+h1{
+    font-size: 33px;
+}
+h2{
+    font-size: 28px
+}
+h3{
+    font-size: 20px;
+}
+h1,h2,h3{
+    font-weight: 600;
+}
+h1,h2,h3,h4,h5,p{
+    margin: 0 0 10px 0;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+ul{
+    @extend %reset-list;
+}
+p{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+    color: #333;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.r{
+    float: right;
+}
+.l{
+    float: left;
+}
+
+input, textarea, select {
+    display: block;
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+input[type=text], input[type=file]{
+    @extend %box;
+    border: 1px solid #999;
+    box-shadow: inset 0 1px 3px #ddd;
+    @include border-radius(1px);
+    padding-left: 0.5rem;
+    height: 50px;
+    width: 100%;
+    &:focus{
+        outline: 0;
+        border-color: #0078e7;
+    }
+}
+input[type=file]{
+    padding: 0.7rem;
+}
+textarea{
+    @extend %box;
+    border: 1px solid #999;
+    box-shadow: inset 0 1px 3px #ddd;
+    @include border-radius(1px);
+    padding: 1rem;
+    height: 8rem;
+    width: 100%;
+    &:focus{
+        outline: 0;
+        border-color: #0078e7;
+    }
+}
+select{
+    @extend %box;
+    border: 1px solid #999;
+    box-shadow: inset 0 1px 3px #ddd;
+    @include border-radius(1px);
+    padding: 0 1rem;
+    height: 50px;
+    width: 100%;
+    &:focus{
+        outline: 0;
+        border-color: #0078e7;
+    }
+}
+button, a.btn{
+    @extend %box;
+    border: none;
+    @include border-radius(3px);
+    padding: 0.4rem 0.7rem;
+    background: #0078e7;
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    &:focus, &:hover{
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+        background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+        background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.10));
+        background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+        background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    }
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+    &.green {
+    background: rgb(28, 184, 65); /* this is a green */
+    }
+
+    &.red {
+        background: rgb(202, 60, 60); /* this is a maroon */
+    }
+
+    &.orange {
+        background: rgb(223, 117, 20); /* this is an orange */
+    }
+
+    &.lightblue {
+        background: rgb(66, 184, 221); /* this is a light blue */
+    }
+}
+
+.p10{
+    padding: 10px;
+}
+.p20{
+    padding: 20px;
+}
+.p30{
+    padding: 30px;
+}
+.mb5{
+    margin-bottom: 5px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+.mb30{
+    margin-bottom: 30px;
+}
+
+.hide{
+    display: none !important;
+}
+@media only screen and (min-width: 1100px) {
+    .hide-l{
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 950px) and (max-width: 1099px) {
+    .layout{
+        .content{
+            width: 100%;
+        }
+        &.sidebar{
+            .content{
+                width: 100%;
+            }
+            .sidebar{
+                width: 100%;
+            }
+        }
+    }
+    .hide-m{
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 949px) {
+    .layout{
+        .content{
+            width: 100%;
+        }
+        &.sidebar{
+            .content{
+                width: 100%;
+            }
+            .sidebar{
+                width: 100%;
+            }
+        }
+    }
+    .hide-s{
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 0) and (max-width: 599px)  {
+    .layout{
+        .content{
+            width: 100%;
+        }
+        &.sidebar{
+            .content{
+                width: 100%;
+            }
+            .sidebar{
+                width: 100%;
+            }
+        }
+    }
+    .hide-xs{
+        display: none !important;
+    }
+}

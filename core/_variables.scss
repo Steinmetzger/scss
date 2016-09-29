@@ -1,0 +1,13 @@
+$xxs-screen: 400px !default;
+$xs-screen: 500px !default;
+$s-screen: 800px !default;
+$m-screen: 992px !default;
+$l-screen: 1200px !default;
+$xl-screen: 1600px !default;
+$xxl-screen: 1700px !default;
+
+$xs-and-up: "min-width: #{$xs-screen}";
+$s-and-up: "min-width: #{$s-screen}";
+$m-and-up: "min-width: #{$m-screen}";
+
+$m-and-down: "max-width: #{$m-screen}";

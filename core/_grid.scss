@@ -1,0 +1,75 @@
+
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+.row {
+	@extend %clear;
+}
+
+[class^="col"] {
+	display: block;
+	float:left;
+	margin: 0 0 0 2%;
+    @extend %box;
+    &:hover{
+        text-decoration: none;
+    }
+    &:first-child { margin-left: 0; }
+}
+
+.col12 {
+	width: 100%;
+}
+
+.col11 {
+  	width: 91.5%;
+}
+.col10 {
+  	width: 83%;
+}
+
+.col9 {
+  	width: 74.5%;
+}
+
+.col8 {
+  	width: 66%;
+}
+
+.col7 {
+  	width: 57.5%;
+}
+
+.col6 {
+  	width: 49%;
+}
+
+.col5 {
+  	width: 40.5%;
+}
+
+.col4 {
+  	width: 32%;
+}
+
+.col3 {
+  	width: 23.5%;
+}
+
+.col2 {
+  	width: 15%;
+}
+
+.col1 {
+  	width: 6.5%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 700px) {
+    [class^="col"] {
+        margin: 1% 0 1% 0%;
+        width: 100%; 
+	}
+}
